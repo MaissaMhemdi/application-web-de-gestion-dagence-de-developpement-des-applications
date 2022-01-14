@@ -1,7 +1,7 @@
 const Categorie = require('./../models/categorie');
 
 exports.all = ((req, res) => {
-    Course.find()
+    Categorie.find()
         .then(categories => res.status(200).json(categories))
         .catch(err => res.status(400).json({ message: err.message }));
 });

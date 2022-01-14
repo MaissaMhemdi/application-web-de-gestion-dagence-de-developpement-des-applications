@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
-const courseRoutes = require('./routes/courses')
+const categorieRoutes = require('./routes/categories')
 
 const app = express();
 
@@ -19,7 +19,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/api/categorie', courseRoutes);
+app.use('/categories', categorieRoutes);
 
 
 module.exports = app;
