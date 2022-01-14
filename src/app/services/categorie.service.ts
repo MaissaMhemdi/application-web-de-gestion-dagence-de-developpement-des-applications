@@ -4,6 +4,7 @@ import { HttpClient } from "@angular/common/http";
 @Injectable({
   providedIn: 'root'
 })
+
 export class CategorieService {
 
   private apiUrl = 'http://localhost:3000/categories';
@@ -13,7 +14,11 @@ export class CategorieService {
 
   /**
    * Get all categories
+<<<<<<< HEAD
    * @returns Observable<Categorie[]>
+=======
+   * @returns Observable<categories[]>
+>>>>>>> a00359c7d6392317621d4ecb5a97ff5a787694e0
    */
   all() {
     return this.http.get(this.apiUrl);
