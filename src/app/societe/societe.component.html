@@ -19,20 +19,20 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let societes of societeList " >
+      <tr *ngFor="let societe of societeList " >
         <td class="text-center">
           <div class="small text-muted">
-            {{societes.id}}
+            {{societe.id}}
           </div>
         </td>
         <td class="text-center">
           <div class="small text-muted">
-            {{societes.nom}}
+            {{societe.nom}}
           </div>
         </td>
         <td>
           <div class="small text-muted"></div>
-          <button class="btn btn-warning" type="button" data-toggle="tooltip" data-placement="top" routerLink="/societe/{{societes.id}}">
+          <button class="btn btn-warning" type="button" data-toggle="tooltip" data-placement="top" >
             <i class="fa fa-search" style="font-size:18px"></i></button>
           <button  class="btn btn-success" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit" style="font-size:18px"></i></button>
           <button class="btn btn-danger " type="button" title="Delete"><i class="fa fa-trash-o" style="font-size:18px"></i></button>
