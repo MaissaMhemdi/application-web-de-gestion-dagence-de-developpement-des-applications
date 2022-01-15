@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfilsService } from '../services/profils.service';
+
+
 import profils from './profil-list';
 
 @Component({
@@ -8,11 +11,17 @@ import profils from './profil-list';
 })
 export class ProfilComponent implements OnInit {
 
-  public profilList= profils;
-  constructor() { }
+
+  public profilsList: any = [];
+  
+  constructor(private profilService:ProfilsService) { }
 
   ngOnInit(): void {
-    console.log(this.profilList)
+    //console.log(this.categoriesList)
+    this.profilService.all().subscribe(
+      res => this.profilsList = res
+    );
   }
+
 
 }

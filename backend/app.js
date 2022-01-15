@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const categorieRoutes = require('./routes/categories')
+const profilRoutes = require('./routes/profils')
+
 
 const developpeurRoutes = require('./routes/developpeurs')
 
@@ -22,6 +24,8 @@ app.use((req, res, next) => {
 });
 
 app.use('/categories', categorieRoutes);
+app.use("/profils", profilRoutes);
+
 
 app.use('/developpeurs', developpeurRoutes);
 
