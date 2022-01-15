@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 
 const categorieRoutes = require('./routes/categories')
 
+const developpeurRoutes = require('./routes/developpeurs')
+
 const app = express();
 
 mongoose.connect('mongodb://localhost:27017/devapp', {
@@ -20,6 +22,9 @@ app.use((req, res, next) => {
 });
 
 app.use('/categories', categorieRoutes);
+
+app.use('/developpeurs', developpeurRoutes);
+
 
 
 module.exports = app;
