@@ -1,0 +1,68 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+    <div class="container-fluid" style="
+   
+    padding-right: 400px;
+">
+        <div class="header-body">
+            <div class="container-fluid mt--7">
+                <div class="row">
+
+                    <div class="col-xl-8 order-xl-1" style="border-top-width: 48px">
+                        <div class="card bg-secondary shadow">
+                            <div class="card-header bg-white border-0">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h3 class="mb-0"> List Categories</h3>
+                                        <br>
+                                    </div>
+                                </div>
+                                <a routerLink="['/ajoutsprint']" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Category</span></a>
+                            </div>
+                            <div class="panel panel-primary">
+                                <div class="card-body">
+                                    <div class="pl-lg-4">
+                                        <div class="row">
+                                            <div class="col-lg-10">
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+
+                                                            <th>Title</th>
+
+
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr *ngFor="let categories of categoriesList ">
+
+
+                                                            <td>{{categories.title}}</td>
+
+
+                                                            <td>
+
+                                                                <ul class="list-inline m-0">
+
+                                                                    <li class="list-inline-item">
+                                                                        <button class="btn btn-success " type="button" data-toggle="tooltip" data-placement="top" [routerLink]="'/categorie/'+categories._id">
+                                                                            <i class="fa fa-search" style="font-size:18px"></i></button>
+
+                                                                    </li>
+
+
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <router-outlet></router-outlet>

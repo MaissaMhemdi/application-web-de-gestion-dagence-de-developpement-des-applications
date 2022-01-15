@@ -1,0 +1,77 @@
+<div class="container">
+    <body>
+      <div class="area"></div><nav class="main-menu">
+        <ul>
+            <li>
+                <a href="\">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Home
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="/profil">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        Profile
+                    </span>
+                </a>
+                
+            </li>
+            <li class="has-subnav">
+                <a routerLink="/projet">
+                   <i class="fa fa-folder-open fa-2x"></i>
+                    <span class="nav-text">
+                        Projets
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a routerLink="/categorie">
+                   <i class="fa fa-list fa-2x"></i>
+                    <span class="nav-text">
+                        Categories
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a routerLink="/client">
+                   <i class="fa fa-user fa-2x"></i>
+                    <span class="nav-text">
+                        Clients
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a routerLink="/developpeur">
+                   <i class="fa fa-table fa-2x"></i>
+                    <span class="nav-text">
+                        Developpeurs
+                    </span>
+                </a>
+            </li>
+            <li>
+              <a routerLink="/societe">
+                   <i class="fa fa-bar-chart-o fa-2x"></i>
+                   <span class="nav-text">
+                       Societes
+                   </span>
+               </a>
+           </li> 
+ 
+    </ul>
+    <ul class="logout">
+        <li>
+            <a href="" >
+                 <i class="fa fa-power-off fa-2x"></i>
+                <span class="nav-text">
+                    Logout
+                </span>
+            </a>
+        </li>  
+    </ul>
+  </nav>
+ </body>
+</div>
+<router-outlet></router-outlet>
