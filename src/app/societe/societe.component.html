@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="btn1">
-    <button class="btn btn-info"  style="margin-left: 10px"  >Ajouter</button>
+    <button class="btn btn-info"  style="margin-left: 10px">Ajouter</button>
 </div>
     <br><br>
 </div>
@@ -19,15 +19,15 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let societe of societeList " >
+      <tr *ngFor="let societes of societeList " >
         <td class="text-center">
           <div class="small text-muted">
-            {{societe.id}}
+            {{societes.id}}
           </div>
         </td>
         <td class="text-center">
           <div class="small text-muted">
-            {{societe.nom}}
+            {{societes.nom}}
           </div>
         </td>
         <td>

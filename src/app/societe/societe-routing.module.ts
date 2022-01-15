@@ -6,7 +6,6 @@ import { SocieteComponent } from './societe.component';
 
 const routes: Routes = [{ path: '', component: SocieteComponent }, 
                         { path: ':id', component: SocieteDetailsComponent },
-                       
                       ];
 
 
@@ -16,7 +15,7 @@ const routes: Routes = [{ path: '', component: SocieteComponent },
     FormsModule],
   exports: [RouterModule],
   declarations: [
-    SocieteDetailsComponent
+    SocieteDetailsComponent,
   ]
 })
 export class SocieteRoutingModule { }
