@@ -1,0 +1,49 @@
+<div class="cont">
+    <div class="row align-items-center">
+      <div class="col-8">
+        <h3 class="mb-0">Liste des developpeurs</h3>
+        <br>
+      </div>
+    </div>
+    <div class="btn1">
+    <button class="btn btn-info"  style="margin-left: 10px"  >Ajouter</button>
+</div>
+    <br><br>
+</div>
+  <table class="table table-responsive-sm table-hover table-outline mb-0">
+    <thead class="thead-light">
+      <tr>
+        <th class="text-center">ID</th>
+        <th class="text-center">Nom</th>
+        <th class="text-center">Prénom</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let developpeurs of developpeurList " >
+        <td class="text-center">
+          <div class="small text-muted">
+            {{developpeurs.id}}
+          </div>
+        </td>
+        <td class="text-center">
+          <div class="small text-muted">
+            {{developpeurs.nom}}
+          </div>
+        </td>
+        <td class="text-center">
+            <div class="small text-muted">
+              {{developpeurs.prenom}}
+            </div>
+          </td>
+        <td>
+          <div class="small text-muted"></div>
+          <button class="btn btn-warning" type="button" data-toggle="tooltip" data-placement="top" routerLink="/developpeur/{{developpeurs.id}}">
+            <i class="fa fa-search" style="font-size:18px"></i></button>
+          <button  class="btn btn-success" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit" style="font-size:18px"></i></button>
+          <button class="btn btn-danger " type="button" title="Delete"><i class="fa fa-trash-o" style="font-size:18px"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<router-outlet></router-outlet>
