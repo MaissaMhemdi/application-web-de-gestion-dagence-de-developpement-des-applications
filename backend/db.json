@@ -31,5 +31,26 @@
             "description": "Spring Boot est un framework Java open source utilisé pour créer un micro Service.Nous adoptons un point de vue avisé sur la plate-forme Spring et les bibliothèques tierces afin que vous puissiez commencer avec un minimum de tracas. La plupart des applications Spring Boot nécessitent une configuration Spring minimale.",
             "image": "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/131026142/original/9b1c1cebb651cd68d16dc1baf84c2559f3eab540/create-a-spring-boot-application-based-on-your-requirements.png"
         }
+    ],
+    "profils" : [
+        { 
+          "id": "1",
+          "nom": "Ahmed",
+          "description":
+         " ahmed est l administrateur",
+          "image":
+            "https://freelanceur.fr/storage/images/avatar/no-avatar.png"
+        },
+        { 
+          "id": "2",
+          "nom": "mohamed",
+          "description":
+          "mohamed est un freelancer",
+          "image":
+            "https://freelanceur.fr/storage/images/avatar/no-avatar.png"
+        }
+      
     ]
+
+
 }

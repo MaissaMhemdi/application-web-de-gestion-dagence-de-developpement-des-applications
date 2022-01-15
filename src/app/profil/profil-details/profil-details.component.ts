@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Profils } from 'src/app/profil.model';
-import profils from '../profil-list';
+import { ProfilsService } from 'src/app/services/profils.service';
+
+
 
 @Component({
   selector: 'app-profil-details',
@@ -10,13 +11,18 @@ import profils from '../profil-list';
 })
 export class ProfilDetailsComponent implements OnInit {
 
-  public profils?: Profils;
-  constructor(private route: ActivatedRoute) { }
+  public profils?: any;
+  constructor(private route: ActivatedRoute,private profilService:ProfilsService) { }
+
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params =>{
         const profilsId= params.get("id");
-        this.profils =profils.filter(profils => profils.id === profilsId)[0]
+
+        this.profilService.get(profilsId!).subscribe(profils => this.profils =profils);
       });
   }
+
+    
+
 }
