@@ -5,6 +5,8 @@ const categorieRoutes = require('./routes/categories')
 const profilRoutes = require('./routes/profils')
 
 
+const developpeurRoutes = require('./routes/developpeurs')
+
 const app = express();
 
 mongoose.connect('mongodb://localhost:27017/devapp', {
@@ -23,6 +25,9 @@ app.use((req, res, next) => {
 
 app.use('/categories', categorieRoutes);
 app.use("/profils", profilRoutes);
+
+
+app.use('/developpeurs', developpeurRoutes);
 
 
 

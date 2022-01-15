@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { DeveloppeursService } from 'src/app/services/developpeurs.service';
 import developpeurs from '../list-developpeur';
 
 @Component({
@@ -10,13 +11,17 @@ import developpeurs from '../list-developpeur';
 export class DetailsDeveloppeurComponent implements OnInit {
 
   public developpeurs?: any;
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private developpeursService: DeveloppeursService) { }
+
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params =>{
-        const developpeursId= params.get("id");
-        this.developpeurs =developpeurs.filter(developpeurs => developpeurs.id === developpeursId)[0]
-      });
-  }
+     
+         const developpeurId = params.get('id');
+         this.developpeursService.get(developpeurId!).subscribe(developpeurs => this.developpeurs = developpeurs);
+        });
+      }
+    
+
 
 }

@@ -14,7 +14,11 @@ export class CategorieService {
 
   /**
    * Get all categories
+<<<<<<< HEAD
+   * @returns Observable<Categorie[]>
+=======
    * @returns Observable<categories[]>
+>>>>>>> a00359c7d6392317621d4ecb5a97ff5a787694e0
    */
   all() {
     return this.http.get(this.apiUrl);
@@ -22,9 +26,9 @@ export class CategorieService {
 
 
   /**
-   * Get a course with the given id
-   * @param id : course id
-   * @returns Observable<Course>
+   * Get a categorie with the given id
+   * @param id : categorie id
+   * @returns Observable<Categorie>
    */
   get(id: string) {
     return this.http.get(this.apiUrl + '/' + id)
